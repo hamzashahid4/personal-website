@@ -311,6 +311,63 @@
     .edu-media-item.tall { aspect-ratio: 3/4; }
     .edu-dissertation-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
     @media (max-width: 768px) { .edu-dissertation-layout { grid-template-columns: 1fr; } .edu-uni-header { grid-template-columns: 1fr; } }
+
+    /* BEYOND WORK — rich life storytelling */
+    .life-block { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 0; overflow: hidden; margin-bottom: 24px; }
+    .life-block.split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; }
+    .life-block.split.reverse { grid-template-columns: 1fr 1.1fr; }
+    .life-block-img { position: relative; min-height: 320px; overflow: hidden; background: var(--bg); }
+    .life-block-img img, .life-block-img video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .life-block-body { padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; }
+    .life-block-label { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent); margin-bottom: 12px; }
+    .life-block-label::before { content: ''; width: 18px; height: 1.5px; background: var(--accent); }
+    .life-block-body h3 { font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.15; margin-bottom: 16px; }
+    .life-block-body h3 .emoji { display: inline-block; margin-right: 10px; font-size: 26px; vertical-align: -2px; }
+    .life-block-body p { font-size: 15.5px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 14px; }
+    .life-block-body p strong { color: var(--text); font-weight: 600; }
+    .life-highlights { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .life-highlight-chip { padding: 7px 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); }
+    .life-highlight-chip strong { color: var(--accent); margin-right: 5px; font-family: var(--font-display); }
+    .life-block-img-multi { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .life-block-img-multi .life-img-cell { position: relative; aspect-ratio: 1/1; overflow: hidden; }
+    .life-block-img-multi .life-img-cell img, .life-block-img-multi .life-img-cell video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .life-img-caption { position: absolute; bottom: 8px; left: 10px; right: 10px; background: rgba(15,23,42,0.82); color: white; font-size: 10.5px; padding: 4px 9px; border-radius: 6px; font-weight: 500; backdrop-filter: blur(6px); letter-spacing: 0.2px; }
+
+    /* Books — special card */
+    .books-block { background: linear-gradient(135deg, #FDF6E3 0%, #FFF8E7 100%); border: 1px solid #F4E4B8; border-radius: 20px; padding: 36px 40px; margin-bottom: 24px; }
+    .books-block .life-block-label { color: #8B5A00; }
+    .books-block .life-block-label::before { background: #8B5A00; }
+    .books-block h3 { font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.15; margin-bottom: 14px; color: #1F1611; }
+    .books-block > p { font-size: 15.5px; color: #5A4A36; line-height: 1.75; margin-bottom: 24px; max-width: 720px; }
+    .books-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+    .book-card { background: white; border: 1px solid #F4E4B8; border-radius: 14px; padding: 22px 24px; }
+    .book-card .book-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #1F1611; margin-bottom: 4px; line-height: 1.3; }
+    .book-card .book-author { font-size: 13px; color: #8B5A00; font-weight: 600; margin-bottom: 10px; letter-spacing: 0.2px; }
+    .book-card .book-takeaway { font-size: 14px; color: #5A4A36; line-height: 1.65; }
+    .books-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: #8B5A00; font-weight: 600; text-decoration: none; padding: 6px 0; border-bottom: 1.5px solid transparent; transition: border-color 0.2s; }
+    .books-cta:hover { border-bottom-color: #8B5A00; color: #8B5A00; }
+
+    /* Media — film/tv/games card */
+    .media-block { background: var(--dark); color: #E2E8F0; border-radius: 20px; padding: 36px 40px; margin-bottom: 24px; }
+    .media-block .life-block-label { color: var(--accent-medium); }
+    .media-block .life-block-label::before { background: var(--accent-medium); }
+    .media-block h3 { font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -0.6px; color: #F8FAFC; margin-bottom: 14px; }
+    .media-block > p { font-size: 15px; color: #94A3B8; line-height: 1.75; margin-bottom: 26px; max-width: 720px; }
+    .media-cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .media-cat-title { font-family: var(--font-display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-medium); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .media-cat-list { display: flex; flex-direction: column; gap: 7px; }
+    .media-cat-list li { font-size: 14.5px; color: #CBD5E1; padding-left: 14px; position: relative; list-style: none; line-height: 1.5; }
+    .media-cat-list li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-medium); font-size: 10px; top: 4px; }
+
+    @media (max-width: 768px) {
+      .life-block.split, .life-block.split.reverse { grid-template-columns: 1fr; }
+      .life-block-img { min-height: 240px; }
+      .life-block-body { padding: 28px; }
+      .books-grid { grid-template-columns: 1fr; }
+      .media-cats { grid-template-columns: 1fr; gap: 18px; }
+      .books-block, .media-block { padding: 28px; }
+      .life-pair { grid-template-columns: 1fr !important; }
+    }
   </style>
 </head>
 <body>
@@ -979,48 +1036,147 @@
       <h2 class="section-title">The rest of the<br>picture.</h2>
       <p class="section-subtitle">I believe what you do outside of work builds who you are inside it. Here's what fills my time, fuels my thinking, and keeps me curious.</p>
     </div>
-    <div class="hobbies-grid">
-
-      <div class="hobby-card reveal">
-        <div class="hobby-emoji">&#127951;</div>
-        <h4>Cricket</h4>
-        <p>A lifelong passion — from street cricket after school to representing my school in the U15 Riyadh Cricket Association. Played 6 years of indoor cricket, finishing runners-up in two straight competitions among 75 teams. Debuted in hardball cricket with the bowling performance of the match.</p>
-        <div class="hobby-highlight">Watched the 2019 World Cup live at Lord's and Edgbaston</div>
+    <!-- CRICKET -->
+    <div class="life-block split reveal">
+      <div class="life-block-img-multi">
+        <div class="life-img-cell">
+          <img src="images/life/cricket-old-trafford.jpg" alt="At Old Trafford watching Pakistan vs England" loading="lazy">
+          <div class="life-img-caption">Old Trafford — first test match</div>
+        </div>
+        <div class="life-img-cell">
+          <img src="images/life/cricket-world-cup-2019.jpg" alt="At the 2019 ICC Cricket World Cup" loading="lazy">
+          <div class="life-img-caption">2019 World Cup — caught on live TV</div>
+        </div>
       </div>
-
-      <div class="hobby-card reveal reveal-delay-1">
-        <div class="hobby-emoji">&#127939;</div>
-        <h4>Running</h4>
-        <p>Started seriously during my MSc at Warwick when COVID closed the gyms. Fell in love with it — regularly running 10K-12K distances. Completed my first full marathon in Riyadh on 8 February 2025. Currently training for more in the UK.</p>
-        <div class="hobby-highlight">First marathon: Riyadh, Feb 2025</div>
+      <div class="life-block-body">
+        <div class="life-block-label">Cricket</div>
+        <h3><span class="emoji">&#127951;</span>A lifelong passion</h3>
+        <p>From watching cricket on TV to playing street cricket every day after school, cricket has been the through-line of my life. I represented my school in the <strong>Under 15s Riyadh Cricket Association</strong>, then played <strong>6 years of indoor cricket</strong> — coming runners-up in two competitions back-to-back among 75 teams.</p>
+        <p>Then came hardball — and I debuted with <strong>the bowling performance of the match</strong>. Now in the UK, I'm already in nets and lining up a club to join before the season kicks off.</p>
+        <p>I watched my first live match at <strong>Old Trafford</strong> — Pakistan vs England, a test match, and what an experience. In 2019 I made it to two ICC World Cup matches in the UK and watched my team win at <strong>Lord's</strong> and <strong>Edgbaston</strong> — and was caught on live TV in the process.</p>
+        <div class="life-highlights">
+          <span class="life-highlight-chip"><strong>U15</strong> Riyadh CA</span>
+          <span class="life-highlight-chip"><strong>2x</strong> Indoor Runners-up</span>
+          <span class="life-highlight-chip"><strong>75</strong> Team Competition</span>
+          <span class="life-highlight-chip"><strong>Hardball</strong> Player of the Match</span>
+        </div>
       </div>
-
-      <div class="hobby-card reveal reveal-delay-2">
-        <div class="hobby-emoji">&#128218;</div>
-        <h4>Reading</h4>
-        <p>An avid reader — self-development books changed how I live and plan. "How Not to Die" transformed my diet. The Steve Jobs biography by Walter Isaacson was profound, inspiring, and refreshingly honest. I track everything on Goodreads.</p>
-        <div class="hobby-highlight"><a href="https://www.goodreads.com/user/show/68236929-hamza-shahid" target="_blank" rel="noopener">View my Goodreads →</a></div>
-      </div>
-
-      <div class="hobby-card reveal">
-        <div class="hobby-emoji">&#128170;</div>
-        <h4>Strength Training</h4>
-        <p>A vital part of my routine — 6 days a week with rotating compound and isolation exercises covering all major muscle groups. My goal is maintaining a healthy muscle-to-fat ratio and building long-term physical resilience.</p>
-      </div>
-
-      <div class="hobby-card reveal reveal-delay-1">
-        <div class="hobby-emoji">&#127955;</div>
-        <h4>Padel & Squash</h4>
-        <p>Played squash throughout my bachelor's in Manchester at Whitworth Hall (2013-2015) — the intensity was unmatched for cardio. Picked up padel in Saudi Arabia over the last 2-3 years. Great fun and easy to get into.</p>
-      </div>
-
-      <div class="hobby-card reveal reveal-delay-2">
-        <div class="hobby-emoji">&#127910;</div>
-        <h4>Media & Gaming</h4>
-        <p>I appreciate great storytelling in any medium. Favourite films: The Dark Knight, The Prestige. TV: Breaking Bad, Lost, The Office. Games: Red Dead Redemption, The Last of Us, Zelda: Breath of the Wild.</p>
-      </div>
-
     </div>
+
+    <!-- RUNNING -->
+    <div class="life-block split reverse reveal">
+      <div class="life-block-body">
+        <div class="life-block-label">Running</div>
+        <h3><span class="emoji">&#127939;</span>From the Warwick lockdown to a marathon</h3>
+        <p>Running has become a huge part of my life. I started in 2018 between the gym and the outdoors, but it became serious during my <strong>MSc at Warwick during COVID</strong> — when the gyms shut, I laced up my shoes and started recording every run. Faster, longer, more often. Eventually 10K–12K runs were just a normal Tuesday.</p>
+        <p>On <strong>8 February 2025 I ran my first full marathon in Riyadh</strong>. Running with a group has a collective energy that's hard to describe — you feed off each other for the entire 42 km. Now in the UK, I'm training for the next one.</p>
+        <div class="life-highlights">
+          <span class="life-highlight-chip"><strong>1st</strong> Marathon · Riyadh 2025</span>
+          <span class="life-highlight-chip"><strong>10–12K</strong> Regular Run</span>
+          <span class="life-highlight-chip"><strong>Group</strong> Energy</span>
+        </div>
+      </div>
+      <div class="life-block-img-multi">
+        <div class="life-img-cell">
+          <video src="images/life/marathon-run.mp4" autoplay muted loop playsinline></video>
+          <div class="life-img-caption">Marathon morning · Riyadh, Feb 2025</div>
+        </div>
+        <div class="life-img-cell">
+          <img src="images/life/running-pit-stop.jpg" alt="Running pit stop with smartwatch" loading="lazy">
+          <div class="life-img-caption">Mid-run pit stop</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKS — special card -->
+    <div class="books-block reveal">
+      <div class="life-block-label">Reading & Self-Development</div>
+      <h3>&#128218; The books that changed how I live</h3>
+      <p>There was a season of my life where self-development books reshaped how I live, how I process events, and how I plan for the future. Two stand out — and they keep showing up in my decisions to this day.</p>
+      <div class="books-grid">
+        <div class="book-card">
+          <div class="book-title">How Not to Die</div>
+          <div class="book-author">Dr. Michael Greger</div>
+          <div class="book-takeaway">Cleaned up my diet completely. The book broke down the science of nutrition and longevity, and the <strong>Daily Dozen</strong> framework became my non-negotiable — a checklist of foods I aim to eat every single day. It changed my relationship with food from "what do I crave" to "what does my body actually need".</div>
+        </div>
+        <div class="book-card">
+          <div class="book-title">Steve Jobs</div>
+          <div class="book-author">Walter Isaacson</div>
+          <div class="book-takeaway">As a long-time fan of Apple products, I wanted to understand the man behind them. The book was profound, inspiring, and at times refreshingly honest about the ugly side too — exactly what a real biography should be. It taught me that obsessive product taste, when paired with discipline, can move the world.</div>
+        </div>
+      </div>
+      <a href="https://www.goodreads.com/user/show/68236929-hamza-shahid" target="_blank" rel="noopener" class="books-cta">Track everything I read on Goodreads &rarr;</a>
+    </div>
+
+    <!-- PADEL & SQUASH -->
+    <div class="life-block reveal">
+      <div class="life-block-body" style="padding: 32px 40px;">
+        <div class="life-block-label">Racquet Sports</div>
+        <h3><span class="emoji">&#127955;</span>Padel & Squash</h3>
+        <p>I've played squash and padel in phases throughout my life. <strong>At Manchester I played squash regularly at Whitworth Hall from 2013-2015</strong> — the intensity is unmatched. The cardio was so brutal I dropped a noticeable amount of weight just from playing 2-3 times a week.</p>
+        <p>More recently, <strong>padel</strong> has exploded across the Middle East and I've been playing on the regular for the last 2-3 years. It's intense, social, easy to pick up, and an absolute laugh with a group of friends. Best of both worlds.</p>
+        <div class="life-highlights">
+          <span class="life-highlight-chip"><strong>Squash</strong> Manchester 2013-15</span>
+          <span class="life-highlight-chip"><strong>Padel</strong> Riyadh 2022-24</span>
+          <span class="life-highlight-chip"><strong>Whitworth Hall</strong> Courts</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRENGTH TRAINING + HIKING — paired -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;" class="life-pair">
+      <div class="life-block reveal" style="margin-bottom: 0;">
+        <div class="life-block-body" style="padding: 32px 36px;">
+          <div class="life-block-label">Strength Training</div>
+          <h3 style="font-size: 24px;"><span class="emoji">&#128170;</span>6 days a week, every week</h3>
+          <p>Strength training is non-negotiable for me. <strong>I gym 6 days a week</strong>, rotating compound and isolation exercises so I cover every major muscle group through the week. The goal is a healthy muscle-to-fat ratio and long-term physical resilience — not aesthetics, but the kind of strength that holds up in your 40s, 50s, and beyond.</p>
+        </div>
+      </div>
+      <div class="life-block reveal reveal-delay-1" style="margin-bottom: 0;">
+        <div class="life-block-body" style="padding: 32px 36px;">
+          <div class="life-block-label">Hiking</div>
+          <h3 style="font-size: 24px;"><span class="emoji">&#128507;&#65039;</span>Deserts, Welsh hills, and a tent on the way</h3>
+          <p>My very first hike was <strong>at night in the Saudi desert</strong> — would not recommend, but unforgettable. Since moving to the UK I've been hiking every 2-3 months, mostly in <strong>Wales with friends</strong>. Up next: my first proper camping trip.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDIA — dark card -->
+    <div class="media-block reveal">
+      <div class="life-block-label">Media & Gaming</div>
+      <h3>&#127910; Stories worth your time</h3>
+      <p>I love a good film, a great show, and a deep video game. There's a huge amount of inspiration to be drawn from quality storytelling in any medium — but it's also worth being careful, because binge-watching and gaming can quietly steal weeks of your life. Curate, then commit.</p>
+      <div class="media-cats">
+        <div>
+          <div class="media-cat-title">&#127909; Films</div>
+          <ul class="media-cat-list">
+            <li>The Dark Knight</li>
+            <li>The Prestige</li>
+            <li>Tarzan</li>
+          </ul>
+        </div>
+        <div>
+          <div class="media-cat-title">&#128250; TV Shows</div>
+          <ul class="media-cat-list">
+            <li>Lost</li>
+            <li>Breaking Bad</li>
+            <li>Game of Thrones</li>
+            <li>The Office</li>
+            <li>The Studio</li>
+          </ul>
+        </div>
+        <div>
+          <div class="media-cat-title">&#127918; Games</div>
+          <ul class="media-cat-list">
+            <li>Red Dead Redemption</li>
+            <li>Uncharted Series</li>
+            <li>The Last of Us</li>
+            <li>Zelda: Breath of the Wild</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
