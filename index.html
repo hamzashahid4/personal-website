@@ -368,6 +368,42 @@
       .books-block, .media-block { padding: 28px; }
       .life-pair { grid-template-columns: 1fr !important; }
     }
+
+    /* SPEAKING — talks section */
+    .talk-card { background: var(--dark); color: #E2E8F0; border-radius: 22px; overflow: hidden; position: relative; display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; }
+    .talk-card-hero { position: relative; min-height: 460px; overflow: hidden; }
+    .talk-card-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .talk-card-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, rgba(15,23,42,0.5) 100%); pointer-events: none; }
+    .talk-card-hero-overlay { position: absolute; top: 24px; left: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 2; }
+    .talk-card-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(15,23,42,0.78); color: #F8FAFC; padding: 7px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.12); width: fit-content; letter-spacing: 0.2px; }
+    .talk-card-pill.live::before { content: ''; width: 7px; height: 7px; background: #EF4444; border-radius: 50%; animation: pulse-dot 2s ease-in-out infinite; }
+    .talk-card-pill.gold { background: rgba(217,119,6,0.18); border-color: rgba(217,119,6,0.4); color: #FCD34D; }
+    .talk-card-body { padding: 44px 44px; display: flex; flex-direction: column; justify-content: center; }
+    .talk-card-event { font-family: var(--font-display); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-medium); margin-bottom: 14px; }
+    .talk-card-event::before { content: ''; display: inline-block; width: 18px; height: 1.5px; background: var(--accent-medium); vertical-align: middle; margin-right: 10px; }
+    .talk-card-body h3 { font-family: var(--font-display); font-size: 26px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; color: #F8FAFC; margin-bottom: 12px; }
+    .talk-card-body h3 em { color: var(--accent-medium); font-style: italic; font-weight: 700; }
+    .talk-card-venue { font-size: 14px; color: #94A3B8; margin-bottom: 18px; font-weight: 500; }
+    .talk-card-venue strong { color: #CBD5E1; font-weight: 600; }
+    .talk-card-body p { font-size: 15px; color: #94A3B8; line-height: 1.7; margin-bottom: 14px; }
+    .talk-card-body p strong { color: #F1F5F9; font-weight: 600; }
+    .talk-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .talk-topic-chip { padding: 6px 13px; background: rgba(94,234,212,0.10); border: 1px solid rgba(94,234,212,0.25); border-radius: 100px; font-size: 12px; font-weight: 600; color: var(--accent-medium); letter-spacing: 0.2px; }
+
+    /* Slide gallery */
+    .talk-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+    .talk-gallery-item { position: relative; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; background: var(--dark-surface); border: 1px solid rgba(255,255,255,0.08); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+    .talk-gallery-item:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+    .talk-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .talk-gallery-item:hover img { transform: scale(1.04); }
+    .talk-gallery-caption { position: absolute; bottom: 10px; left: 12px; right: 12px; background: rgba(15,23,42,0.85); color: white; font-size: 11px; padding: 5px 10px; border-radius: 6px; font-weight: 500; backdrop-filter: blur(8px); letter-spacing: 0.2px; }
+
+    @media (max-width: 900px) {
+      .talk-card { grid-template-columns: 1fr; }
+      .talk-card-hero { min-height: 320px; }
+      .talk-card-body { padding: 32px; }
+      .talk-gallery { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -380,6 +416,7 @@
       <a href="#about">About</a>
       <a href="#career">Career</a>
       <a href="#projects">Projects</a>
+      <a href="#speaking">Speaking</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#life">Life</a>
@@ -779,6 +816,56 @@
         <div class="achievement-source">PMI · August 2025</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section id="speaking" style="padding: var(--section-pad) 0; background: var(--surface);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Speaking</div>
+      <h2 class="section-title">On stage.</h2>
+      <p class="section-subtitle">Sharing what we're building, what we're learning, and where Arabic AI is heading — for the people shaping the next chapter of the region's tech story.</p>
+    </div>
+
+    <div class="talk-card reveal">
+      <div class="talk-card-hero">
+        <img src="images/talks/dga-summit-finetuning-hero.jpg" alt="Hamza speaking at the Digital Government Authority Summit at the Ritz-Carlton Riyadh" loading="lazy">
+        <div class="talk-card-hero-overlay">
+          <span class="talk-card-pill gold">&#127942; Featured Talk</span>
+          <span class="talk-card-pill">December 2023</span>
+        </div>
+      </div>
+      <div class="talk-card-body">
+        <div class="talk-card-event">Digital Government Authority Summit</div>
+        <h3>The Power of Large Language Models <em>&amp; the significance of Fine-Tuning</em></h3>
+        <div class="talk-card-venue"><strong>The Ritz-Carlton, Riyadh</strong> &nbsp;·&nbsp; Digital Saudi Pavilion</div>
+        <p>I was <strong>among the first speakers in the Kingdom</strong> to take the stage on the power of Large Language Models and the significance of fine-tuning for enterprise — at a moment when most organisations were still figuring out what an LLM even was.</p>
+        <p>Walked the audience through how LLMs work under the hood, why fine-tuning matters for delivering tailored business outcomes, and how we'd applied these techniques inside Mulhem to deliver Arabic-native solutions for customer interactions, data analysis, automation, and multilingual support.</p>
+        <div class="talk-topics">
+          <span class="talk-topic-chip">Large Language Models</span>
+          <span class="talk-topic-chip">Fine-Tuning</span>
+          <span class="talk-topic-chip">Enterprise AI</span>
+          <span class="talk-topic-chip">Arabic NLP</span>
+          <span class="talk-topic-chip">Mulhem</span>
+        </div>
+        <div class="talk-gallery">
+          <div class="talk-gallery-item">
+            <img src="images/talks/dga-summit-power-of-llms.jpg" alt="Slide: The Power of Large Language Models — Business Transformation" loading="lazy">
+            <div class="talk-gallery-caption">The Power of LLMs</div>
+          </div>
+          <div class="talk-gallery-item">
+            <img src="images/talks/dga-summit-llms-intro.jpg" alt="Slide: How LLMs work — advanced AI models trained on vast amounts of text" loading="lazy">
+            <div class="talk-gallery-caption">How LLMs Work</div>
+          </div>
+          <div class="talk-gallery-item">
+            <img src="images/talks/dga-summit-panel.jpg" alt="Hamza on the panel discussion at the DGA Summit" loading="lazy">
+            <div class="talk-gallery-caption">Panel Discussion</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
